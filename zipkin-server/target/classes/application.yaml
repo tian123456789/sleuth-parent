@@ -7,3 +7,12 @@ server:
 spring: 
   application:  
     name: zipkin-server
+#RabbitMQ配置 利用方式二RabbitMQ传输数据
+  rabbitmq: 
+    host: localhost
+    port: 5672
+    username: root
+    password: root
+#RabbitMQ配置 利用方式二RabbitMQ传输数据   
+
+  

@@ -23,11 +23,26 @@
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-starter-web</artifactId>
   	</dependency>
-  	<dependency>
-  		<groupId>org.springframework.cloud</groupId>
-  		<artifactId>spring-cloud-starter-zipkin</artifactId>
-  		<version>RELEASE</version>
-  	</dependency>
+  	<!-- 链路追踪 -->
+	  	<!-- 方式一:次依赖 gateway-service手机数据通过http上传给zikpn-server -->
+  		<!-- <dependency>
+	  		<groupId>org.springframework.cloud</groupId>
+	  		<artifactId>spring-cloud-starter-zipkin</artifactId>
+	  		<version>RELEASE</version>
+	  	</dependency> -->
+	  	<!-- 方式一:次依赖 gateway-service手机数据通过http上传给zikpn-server -->
+	  	
+	  	<!-- 方式二:使用rabbitMQ传输链路数据 -->
+	  	<dependency>
+	  		<groupId>org.springframework.cloud</groupId>
+	  		<artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
+	  	</dependency>
+	  	<dependency>
+	  		<groupId>org.springframework.cloud</groupId>
+	  		<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+	  	</dependency>
+	  	<!-- 方式二:使用rabbitMQ传输链路数据 -->
+	 <!-- 链路追踪 -->
   </dependencies>	
   
   <build>
